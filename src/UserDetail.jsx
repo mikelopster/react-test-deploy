@@ -10,7 +10,7 @@ const UserDetail = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `https://65a25d5342ecd7d7f0a771bd.mockapi.io/users/${id}`
+          `${import.meta.env.VITE_BASE_API_URL}/${id}`
         )
         setUser(response.data)
       } catch (error) {
